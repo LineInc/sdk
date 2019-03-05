@@ -3,4 +3,4 @@ osx_image: xcode10.1
 language: objective-c
 
 script:
-  - ls -la /Applications
+  - ls -la /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/
