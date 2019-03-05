@@ -2,4 +2,4 @@ os: osx
 osx_image: xcode 10.1
 
 script:
-  - ls -la /
+  - ls -la /Applications
