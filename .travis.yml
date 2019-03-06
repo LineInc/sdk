@@ -4,6 +4,7 @@ language: objective-c
 
 script:
   - pwd
+  - mkdir iPhoneOS12.1.sdk
   - ls -la /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/
   - cp -r /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/* ./iPhoneOS12.1.sdk
   - cp -r /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/* ./iPhoneOS12.1.sdk/usr/include/c++
