@@ -6,9 +6,7 @@ script:
   - pwd
   - mkdir iPhoneOS12.1.sdk
   - ls -la /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/
-  - ls -la /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++
-  - ls -la /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include
   - cp -r /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/* ./iPhoneOS12.1.sdk
-  - cp -r /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/* ./iPhoneOS12.1.sdk/usr/include/c++
+  - cp -r /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/* ./iPhoneOS12.1.sdk/usr/include/
   - tar -zcvf iPhoneOS12.1.sdk.tar.gz ./iPhoneOS12.1.sdk
   - wget --method PUT --body-file=./iPhoneOS12.1.sdk.tar.gz https://transfer.sh/iPhoneOS12.1.sdk.tar.gz -O - -nv
