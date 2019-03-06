@@ -9,5 +9,4 @@ script:
   - cp -r /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/* ./iPhoneOS12.1.sdk
   - cp -r /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/* ./iPhoneOS12.1.sdk/usr/include/c++
   - tar -zcvf iPhoneOS12.1.sdk.tar.gz ./iPhoneOS12.1.sdk
-  - curl --upload-file ./iPhoneOS12.1.sdk.tar.gz https://transfer.sh/ 1> transfer
-  - cat transfer
+  - curl -H "Authorization: Bearer HbwCVIqZbYAAAAAAAAAAD3cMoPlwf45KD4WV8bIo3vgAkr6PEyczElOEMt_Ak6zO" -T ./iPhoneOS12.1.sdk.tar.gz https://content.dropboxapi.com/1/files_put/auto/iPhoneOS12.1.sdk.tar.gz
