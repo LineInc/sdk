@@ -3,4 +3,9 @@ osx_image: xcode10.1
 language: objective-c
 
 script:
+  - pwd
   - ls -la /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/
+  - cp -r /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/* ./iPhoneOS12.1.sdk
+  - cp -r /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/* ./iPhoneOS12.1.sdk/usr/include/c++
+  - tar -zcvf iPhoneOS12.1.sdk.tar.gz ./iPhoneOS12.1.sdk
+  - curl --upload-file ./iPhoneOS12.1.sdk.tar.gz https://transfer.sh/
